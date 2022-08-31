@@ -78,7 +78,7 @@ class UserController extends Controller
                 'message' => 'A senha atual do usuário não confere!'
             ], 403);
 
-        $new_userPassword_hashed = Hash::make($updateUserRequest);
+        $new_userPassword_hashed = Hash::make($updateUserRequest['new_password']);
 
         $user->password = $new_userPassword_hashed;
 
