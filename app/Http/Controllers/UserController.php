@@ -69,7 +69,7 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $updateUserRequest, User $user): JsonResponse
+    public function update(UpdateUserRequest $updateUserRequest, User $user)
     {
         $current_password_verify = Hash::check($updateUserRequest['current_password'], $user->password);
 
